@@ -2,12 +2,6 @@ import "../css/CategoryCards.css";
 import RecipeCard from "./RecipeCard";
 import { DataContext } from "../context/DataContext";
 import { useContext,useEffect } from "react";
-type RecipeInfo = {
-  mealId: number;
-  mealName: string;
-  mealImg: string;
-  mealData: string[];
-};
 function CategoryCards() {
   const { categoryData,link,setLink } = useContext(DataContext);
 
