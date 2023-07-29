@@ -1,7 +1,7 @@
 .newsletter {
   background: url("../img/newsletter.jpg") right no-repeat;
   width: 100vw;
-  min-height: 30rem;
+ height: 30rem;
   /* -webkit-text-stroke: 0.4px black; */
   display: flex;
   flex-direction: column;
@@ -23,56 +23,62 @@
   width: 10em;
   height: 10rem;
 }
+.sub_to_newsletter{
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media(min-width:50rem){
+  sub_to_newsLetter{
+    width: 24rem;
+    justify-content: space-between;
+  }
+}
 .mail{
-  width: 12rem;
-  height: 2rem;
+  width: 10rem;
+  height: 2.5rem;
   border-radius: 1rem;
-  word-wrap: break-word;
+/*   word-wrap: break-word; */
   padding-right: 2.2rem;
   padding-left: 0.5rem;
   font-size: 1rem;
   outline-style: none;
 }
-.sub_to_newsletter{
-  width: 18rem;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-@media(min-width:50rem){
+/* @media(min-width:50rem){
   .sub_to_newsletter{
     justify-content: center;
   }
-}
+} */
 .button_newsletter{
-  background-color: #fff;
-  mask-image: url("../img/newsLetter/send.png");
+/*   mask-image: url("../img/newsLetter/send.png");
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: contain;
   -webkit-mask-image: url("../img/newsLetter/submit.png");
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  position: relative;
-  right: 15%;
-  width: 3rem;
+  -webkit-mask-size: contain; */
+/*   right: 15%; */
+display: inline-block;
+  width: 6rem;
+  height: 2rem;
+  color: black;
   height: 3rem;
-  border-radius: 50%;
+  border-radius: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  padding: 0;
+  background-color: #8BAF45;
+  cursor: pointer;
 }
+.button_newsletter:hover{
+  background-color: greenyellow;
+  transition: background-color 300ms ease-in;
+}
+
 .newsletter_wrapper>p{
   height: 4rem;
   overflow: hidden;
 }
-@media(min-width:50rem){
-  .button_newsletter{
-    position: absolute;
-    top: 85.5%;
-    left: 60%;
-  }
-}
-.button_newsletter:hover{
-  cursor: pointer;
-/*   box-shadow: -2px -2px 8px lightgray,2px 2px 8px lightgray;
-  transition:box-shadow 300ms ease-in; */
-}
+

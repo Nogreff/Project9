@@ -12,7 +12,7 @@ function NewsLetter() {
       </p>
       <div className="sub_to_newsletter">
         <input type="text" className="mail"></input>
-        <button className="button_newsletter"></button>
+        <button className="button_newsletter">SUBSCRIBE</button>
       </div>
       </div>
     </div>
