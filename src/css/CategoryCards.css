@@ -1,0 +1,10 @@
+.category_cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  min-height: 40rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #fff;
+}

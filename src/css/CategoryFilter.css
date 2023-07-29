@@ -1,0 +1,36 @@
+.category_filter {
+  background-color: #fff;
+  width: 90vw;
+  min-height: 15rem;
+  color: black;
+}
+.search_bar_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.filter_search {
+  width: 15rem;
+  height: 2rem;
+  border-radius: 2rem;
+}
+.filter_button {
+  position: absolute;
+  right: 13%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: white;
+}
+.search_options{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.search_options>a:nth-child(even){
+  background:lightcyan
+}
+.search_options>a:nth-child(odd){
+  background: #fff;
+}

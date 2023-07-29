@@ -1,0 +1,23 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+@media(min-width:50rem){
+  #root{
+    overflow: visible;
+  }
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+html,body{
+  overflow-x: hidden;
+}

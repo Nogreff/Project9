@@ -1,0 +1,131 @@
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #fff;
+}
+.card_0 {
+  background: url("../img/beef.jpg");
+}
+.card_1 {
+  background: url("../img/chicken.jpg");
+}
+.card_2 {
+  background: url("../img/dessert.jpg");
+}
+.card_3 {
+  background: url("../img/lamb.jpg");
+}
+.card_4 {
+  background: url("../img/misc.jpg");
+}
+.card_5 {
+  background: url("../img/pasta.jpg");
+}
+.card_6 {
+  background: url("../img/pork.jpg");
+}
+.card_7 {
+  background: url("../img/seafood.jpg");
+}
+.card_8 {
+  background: url("../img/sidedish.jpg");
+}
+.card_9 {
+  background: url("../img/starter.jpg");
+}
+.card_10 {
+  background: url("../img/vegan.jpg");
+}
+.card_11 {
+  background: url("../img/vegetarian.jpeg");
+}
+.card_12 {
+  background: url("../img/breakfast.jpg");
+}
+.card_13 {
+  background: url("../img/goat.jpg");
+}
+
+.card_0::after {
+  content: "BEEF";
+}
+.card_1::after {
+  content: "CHICKEN";
+}
+.card_2::after {
+  content: "DESSERT";
+}
+.card_3::after {
+  content: "LAMB";
+}
+.card_4::after {
+  content: "MISC";
+}
+.card_5::after {
+  content: "PASTA";
+}
+.card_6::after {
+  content: "PORK";
+}
+.card_7::after {
+  content: "SEAFOOD";
+}
+.card_8::after {
+  content: "SIDEDISH";
+}
+.card_9::after {
+  content: "STARTER";
+}
+.card_10::after {
+  content: "VEGAN";
+}
+.card_11::after {
+  content: "VEGETARIAN";
+}
+.card_12::after {
+  content: "BREAKFAST";
+}
+.card_13::after {
+  content: "GOAT";
+}
+.category_card::after {
+  position: relative;
+  bottom: -60%;
+  color: transparent;
+  font-size: 1.3rem;
+  font-weight: 800;
+  -webkit-text-stroke: 0.5px black;
+  color: #8baf45;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+}
+@media(min-width:50rem){
+  .category_card::after{
+    bottom: -80%;
+    font-size: 2rem;
+  }
+}
+.category_card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+}
+@media(min-width:50rem){
+  .category_card{
+    width: 16rem;
+    height: 16rem;
+  }
+}
+.category_card:hover{
+  cursor: pointer;
+  box-shadow: -2px -2px 8px gray,2px 2px 8px gray;
+  transition:box-shadow 200ms ease-in
+}

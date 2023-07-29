@@ -1,0 +1,22 @@
+.recipe_directions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #242424;
+}
+.directions_list {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  text-align: justify;
+  line-height: 2rem;
+  font-style: italic;
+  margin: 2rem;
+}
+@media(min-width:55rem){
+  .directions_list{
+    width: 60%;
+  }
+}

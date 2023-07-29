@@ -1,0 +1,28 @@
+.category_explore{
+    width: 100vw;
+   min-height: 8rem;
+}
+.category_explore>h3{
+
+}
+.category_list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.category_list>li{
+    margin: 0.4rem;
+    color: goldenrod;
+    border:1px solid goldenrod;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    transition: color 300ms ease-in,border-color 300ms ease-in;
+}
+.category_list>li:hover{
+    cursor: pointer;
+    color: #fff;
+    border-color: #fff;
+}
