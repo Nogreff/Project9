@@ -13,7 +13,7 @@ function CategoryCards() {
 
   // let recipeInfo: RecipeInfo[] = [];
   if (categoryData) {
-    // console.log(categoryData.meals[0]);
+    console.log(categoryData);
   }
   useEffect(()=>{
     if(link===null){
@@ -23,8 +23,10 @@ function CategoryCards() {
   return (
     <div className="category_cards">
       {Array.isArray(categoryData) && categoryData != null
-        ? categoryData.map((value, index) => {
-            return <RecipeCard mealData={{ value }} key={index} />;
+        ? Object.values(categoryData).map((value, index) => {
+            const data:string[] =[value]
+            console.log(...data)
+            return <RecipeCard mealData={data} key={index} />;
           })
         : null}
     </div>

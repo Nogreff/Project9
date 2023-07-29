@@ -124,7 +124,7 @@ export const DataProvider = ({ children }: ChildrenType): ReactElement => {
   const [recipeEmbedID, setRecipeEmbedID] = useState<string | null>("");
   useEffect(() => {
     const apiRequest = async (): Promise<string | null> => {
-      const data = await fetch(link[1]).then((response) => {
+      const data = await fetch(link![1]).then((response) => {
         console.log("link "+link)
         return response.json();
       });
@@ -168,19 +168,18 @@ export const DataProvider = ({ children }: ChildrenType): ReactElement => {
     });
 
     setRecipeIngredients(recipeDumy);
-    console.log(
-      recipeData.strYoutube
-        ? recipeData.strYoutube
-            .toString()
-            .slice(32, recipeData.strYoutube.toString().length)
-        : null
-    );
-    if (recipeData.strYoutube) {
+    console.log(recipeData);
+    let recipeVideo:string[]=[]
+    if(recipeData){
+      recipeVideo=[...Object.values(recipeData)]
+      console.log(recipeVideo)
+    }
+    if (recipeVideo[8]) {
       setRecipeEmbedID(
         "https://www.youtube.com/embed/" +
-          recipeData.strYoutube
+          recipeVideo[8]
             .toString()
-            .slice(32, recipeData.strYoutube.toString().length + ""))
+            .slice(32, recipeVideo[8].length )+ "")
       
     }else{
       setRecipeEmbedID(

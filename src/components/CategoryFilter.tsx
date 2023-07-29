@@ -2,7 +2,7 @@ import "../css/CategoryFilter.css";
 import DataContext from "../context/DataContext";
 import {useContext,useState,useRef, SetStateAction} from "react"
 function CategoryFilter() {
-  const {categoryData,setCategoryData}=useContext(DataContext)
+/*   const {categoryData,setCategoryData}=useContext(DataContext)
   const [filteredData,setFilteredData]=useState<object>([])
   const [recipeEntered,setRecipeEntered]=useState<string>("")
   const focusRef=useRef() as React.MutableRefObject<HTMLInputElement>
@@ -41,10 +41,10 @@ function CategoryFilter() {
       },100)
     }
   }
-  console.log(categoryData)
+  console.log(categoryData) */
   return (
     <div className="category_filter">
-      <h3>sorty by name</h3>
+{/*       <h3>sorty by name</h3>
       <div className="search_bar_container">
         <div className="search_bar">
         <input type="text" className="filter_search" ref={focusRef} onBlur={()=>focusSearch(false)} onFocus={()=>focusSearch(true)} onChange={e=>recipeFilter(e.target.value)}/>
@@ -57,7 +57,7 @@ function CategoryFilter() {
           })}
         </div>
         <button className="filter_button">X</button>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -8,11 +8,16 @@ type PropsType = {
 function RecipeCard({ mealData }: PropsType): ReactElement {
   const { setRecipeLink, setRecipeIngredients ,setRecipeEmbedID} = useContext(DataContext);
   const navigate = useNavigate();
-  console.log(mealData)
+  let meal:string[][]|null=[]
+  if(mealData){
+    meal=[Object.values(mealData[0])]
+    console.log(meal)
+  }
   return (
+    meal?
     <div className="recipe_cards">
-      <img src={mealData.value.strMealThumb} className="recipe_img" />
-      <h4>{mealData.value.strMeal.length>20?mealData.value.strMeal.slice(0,21)+" ...":mealData.value.strMeal}</h4>
+      <img src={meal[0][1]} className="recipe_img" />
+      <h4>{meal[0][0].length>20?meal[0][0].slice(0,21)+" ...":meal[0][0]}</h4>
       <span className="recipe_icon"></span>
       <button
         className="recipe_button"
@@ -20,7 +25,7 @@ function RecipeCard({ mealData }: PropsType): ReactElement {
           navigate("/recipe");
           setRecipeLink(
             "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" +
-              mealData.value.idMeal
+              meal![0][2]
           );
           setRecipeIngredients([]);setRecipeEmbedID(null);
         }}
@@ -28,7 +33,9 @@ function RecipeCard({ mealData }: PropsType): ReactElement {
         Read More
       </button>
     </div>
+    :<></>
   );
+  
 }
 
 export default RecipeCard;

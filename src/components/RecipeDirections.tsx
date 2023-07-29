@@ -4,6 +4,10 @@ import DataContext from "../context/DataContext";
 
 function RecipeDirections() {
   const { recipeData } = useContext(DataContext);
+  let directions:string[]=[]
+  if(recipeData){
+    directions=[...Object.values(recipeData)]
+  }
   return (
     <div className="recipe_directions">
       <h2>Directions</h2>
@@ -20,7 +24,7 @@ function RecipeDirections() {
               }
             })
           : null} */
-          recipeData && recipeData.strInstructions
+          directions && directions[5]
         }
       </p>
     </div>
