@@ -1,5 +1,5 @@
 import "../css/RecipeIngredients.css";
-import { SetStateAction, useContext, useEffect, useState } from "react";
+import {  useContext, useEffect, useState } from "react";
 import DataContext from "../context/DataContext";
 function RecipeIngredients() {
   const { recipeIngredients } = useContext(DataContext);

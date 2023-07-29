@@ -1,6 +1,4 @@
 import "../css/CategoryFilter.css";
-import DataContext from "../context/DataContext";
-import {useContext,useState,useRef, SetStateAction} from "react"
 function CategoryFilter() {
 /*   const {categoryData,setCategoryData}=useContext(DataContext)
   const [filteredData,setFilteredData]=useState<object>([])

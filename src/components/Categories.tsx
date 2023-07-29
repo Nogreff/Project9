@@ -1,11 +1,11 @@
 import { DataContext } from "../context/DataContext";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import "../css/Categories.css";
 import { useNavigate } from "react-router-dom";
 function Categories() {
 
   const navigate = useNavigate();
-  const { setLink, recipeIngredients, setRecipeIngredients,categories } =
+  const { setLink, categories } =
     useContext(DataContext);
   /*   useEffect(() => {
     if (recipeIngredients != null) {
