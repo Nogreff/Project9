@@ -6,7 +6,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 8rem 0.5rem 1rem 0.5rem;
+  padding: 8rem 0.5rem 2rem 0.5rem;
+
 }
 @media(min-width:50rem){
   #home{
@@ -15,11 +16,17 @@
 }
 #home>h1{
   font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: -0.5px -0.5px 1px gray,0.5px 0.5px 1px gray;
 }
 @media(min-width:50rem){
   #home>h1{
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
+}
+#home>h2{
+  margin-top: 0;
+  text-shadow: -0.5px -0.5px 1px gray,0.5px 0.5px 1px gray;
 }
 .home_search {
   display: flex;

@@ -2,7 +2,6 @@
   background: url("../img/newsletter.jpg") right no-repeat;
   width: 100vw;
  height: 30rem;
-  /* -webkit-text-stroke: 0.4px black; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,27 +38,12 @@
   width: 10rem;
   height: 2.5rem;
   border-radius: 1rem;
-/*   word-wrap: break-word; */
   padding-right: 2.2rem;
   padding-left: 0.5rem;
   font-size: 1rem;
   outline-style: none;
 }
-/* @media(min-width:50rem){
-  .sub_to_newsletter{
-    justify-content: center;
-  }
-} */
 .button_newsletter{
-/*   mask-image: url("../img/newsLetter/send.png");
-  mask-position: center;
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  -webkit-mask-image: url("../img/newsLetter/submit.png");
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain; */
-/*   right: 15%; */
 display: inline-block;
   width: 6rem;
   height: 2rem;
