@@ -5,6 +5,7 @@ import {
   useEffect,
   SetStateAction,
 } from "react";
+
 type ChildrenType = { children?: ReactElement | ReactElement[] };
 type Categories = {
   categoryName: string;
@@ -122,10 +123,10 @@ export const DataProvider = ({ children }: ChildrenType): ReactElement => {
     []
   );
   const [recipeEmbedID, setRecipeEmbedID] = useState<string | null>("");
+
   useEffect(() => {
     const apiRequest = async (): Promise<string | null> => {
       const data = await fetch(link![1]).then((response) => {
-        console.log("link "+link)
         return response.json();
       });
       return data.meals;
@@ -134,6 +135,7 @@ export const DataProvider = ({ children }: ChildrenType): ReactElement => {
       (categories) => setCategoryData(categories) as unknown as string
     );
   }, [link]);
+
   useEffect(() => {
     const apiRequest = async (): Promise<string[] | null> => {
       const data = await fetch(recipeLink!).then((response) => {
@@ -153,7 +155,6 @@ export const DataProvider = ({ children }: ChildrenType): ReactElement => {
           return recipeDumy.push(["", value[1]]);
         }
       }
-
       if (
         value[0].includes("strMeasure") &&
         value[1] != "" &&
@@ -161,18 +162,13 @@ export const DataProvider = ({ children }: ChildrenType): ReactElement => {
         recipeDumy.length > measureIndex
       ) {
         measureIndex++;
-        console.log(recipeDumy);
-        console.log(value[1]);
         return (recipeDumy[measureIndex - 1][0] = value[1]);
       }
     });
-
     setRecipeIngredients(recipeDumy);
-    console.log(recipeData);
     let recipeVideo:string[]=[]
     if(recipeData){
       recipeVideo=[...Object.values(recipeData)]
-      console.log(recipeVideo)
     }
     if (recipeVideo[8]) {
       setRecipeEmbedID(
@@ -186,20 +182,7 @@ export const DataProvider = ({ children }: ChildrenType): ReactElement => {
         "https://www.youtube.com/embed/")
     }
   }, [recipeData]);
-  /*   useEffect(() => {
-    const getYouTubeID = async (): Promise<string> => {
-      let getID: (string | undefined)[] = [];
-      getID = Object.entries(recipeData as string[]).map((value) => {
-        if (value[0].includes("strYouTube")) {
-          console.log(value[1]);
-          return value[1];
-        }
-      });
-      console.log(getID);
-      return getID.toString();
-    };
-    getYouTubeID().then((data) => setRecipeEmbedID(data) as unknown as string);
-  }, [recipeData]); */
+  
   return (
     <DataContext.Provider
       value={{
