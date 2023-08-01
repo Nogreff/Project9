@@ -1,6 +1,6 @@
-import "../css/RecipeDirections.css";
 import { useContext } from "react";
 import DataContext from "../context/DataContext";
+import "../css/RecipeDirections.css";
 
 function RecipeDirections() {
   const { recipeData } = useContext(DataContext);
@@ -12,20 +12,7 @@ function RecipeDirections() {
     <div className="recipe_directions">
       <h2>Directions</h2>
       <p className="directions_list">
-        {
-          /*         {recipeData
-          ? Object.entries(recipeData).map((value, index) => {
-              if (value[0] === "strInstructions") {
-                return (
-                  <li key={index}>
-                    <p>{value[1]}</p>
-                  </li>
-                );
-              }
-            })
-          : null} */
-          directions && directions[5]
-        }
+        {directions && directions[5]}
       </p>
     </div>
   );

@@ -1,12 +1,12 @@
-import "../css/RecipeMain.css";
 import { useContext } from "react";
 import DataContext from "../context/DataContext";
+import "../css/RecipeMain.css";
+
 function RecipeMain() {
   const { recipeData } = useContext(DataContext);
   let recipe:string[]=[]
   if(recipeData){
     recipe=[...Object.values(recipeData)]
-    console.log(recipe)
   }
   return recipe!=null ? (
     <div className="recipe_main">

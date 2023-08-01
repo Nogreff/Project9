@@ -1,13 +1,9 @@
-import "../css/RecipeIngredients.css";
 import {  useContext, useEffect, useState } from "react";
 import DataContext from "../context/DataContext";
+import "../css/RecipeIngredients.css";
+
 function RecipeIngredients() {
   const { recipeIngredients } = useContext(DataContext);
-  /*   type RecipeIngredients = {
-    measure: string | null;
-    ingredient: string | null;
-  }; */
-
   const [recipeCatcher, setRecipeCatcher] = useState<string[][]>([]);
   useEffect(() => {
     if (
@@ -16,13 +12,8 @@ function RecipeIngredients() {
       recipeCatcher.length === 0
     ) {
       setRecipeCatcher([...recipeIngredients]);
-      console.log(recipeCatcher.length);
     }
-    console.log("loop");
-    console.log(recipeIngredients!.length);
-    //  }
   }, [recipeIngredients, recipeCatcher]);
-  console.log(recipeIngredients);
   return (
     <div className="recipe_ingredients">
       <h2>Ingredients</h2>

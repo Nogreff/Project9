@@ -1,9 +1,9 @@
 import "../css/CategoryHome.css";
 import {useContext} from "react"
 import DataContext from "../context/DataContext";
+
 function CategoryHome() {
   const {link}=useContext(DataContext)
-  console.log(link)
   return (
     <div className="category_home">
       <div className="category_home_wrapper">

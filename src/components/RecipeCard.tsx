@@ -1,17 +1,18 @@
 import { ReactElement, useContext } from "react";
-import "../css/RecipeCard.css";
 import { useNavigate } from "react-router-dom";
 import DataContext from "../context/DataContext";
+import "../css/RecipeCard.css";
+
 type PropsType = {
   mealData: string[];
 };
+
 function RecipeCard({ mealData }: PropsType): ReactElement {
   const { setRecipeLink, setRecipeIngredients ,setRecipeEmbedID} = useContext(DataContext);
   const navigate = useNavigate();
   let meal:string[][]|null=[]
   if(mealData){
     meal=[Object.values(mealData[0])]
-    console.log(meal)
   }
   return (
     meal?

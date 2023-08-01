@@ -9,9 +9,7 @@ function Header() {
   function navToggle() {
     navMenu.current?.classList.toggle("show");
     navButton.current?.classList.toggle("show")
-    console.log(navMenu.current?.classList.value);
   }
-  console.log(navMenu.current?.className);
   return (
     <header>
       <div
@@ -22,7 +20,6 @@ function Header() {
         onClick={() => navigate("/")}
       ></div>
       <button className="nav_button" ref={navButton} onClick={() => navToggle()}>
-      {/*   <span className="hamburger"></span> */}
       </button>
       <nav className="nav_menu" ref={navMenu}>
         <ul className="menu_header">
